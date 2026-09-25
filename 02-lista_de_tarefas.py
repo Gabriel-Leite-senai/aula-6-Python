@@ -40,6 +40,32 @@ def mostar_tarefas_prioridade():
         else:
             print("opção invalida")
 
+def criar_tarefa():
+    nome = input("Qual o nome da tarefa: ")
+    while True:
+        prioridade = input("Qual a prioridade da tarefa: ")
+        prioridade = prioridade.lower()
+        if prioridade == "alta" or prioridade == "media" or prioridade == "baixa":
+            break
+    tarefas.append({"titulo":nome,"concluida":False,"prioridade":prioridade})
+
+def finalizar_tarefa():
+    tarefa = input("digite o nome da tarefa: ")
+    for x in tarefas:
+        if x["titulo"] == tarefa:
+            finalizar = tarefas.index(x)
+            tarefas[finalizar]["concluida"]=True
+            return: 0
+    print("essa tarefa não está na lista")
+
+def remover_tarefa():
+    tarefa = input("digite o nome da tarefa: ")
+    for x in tarefas:
+        if x["titulo"] == tarefa:
+            tarefas.remove(x)
+            return: 0
+    print("essa tarefa não está na lista")
+
 while True:
     print("1 - mostrar todas as tarefas")
     print("2 - mostrar tarefas concluidas")
@@ -61,9 +87,9 @@ while True:
     elif opt == "4":
         mostar_tarefas_prioridade()
     elif opt == "5":
-        print("criar nova tarefa")
+        criar_tarefa()
     elif opt == "6":
-        print("finalizar tarefa")
+        finalizar_tarefa()
     elif opt == "7":
         print("remover tarefa")
     elif opt == "0":
