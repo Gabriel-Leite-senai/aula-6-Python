@@ -93,7 +93,10 @@ while True:
     elif opt == "7":
         print("remover tarefa")
     elif opt == "0":
+        print("  ／l、    ")
+        print("（ﾟ､ ｡ ７   ")       
+        print("  l  ~ヽ   ")   
+        print("  じしf_,)ノ")
         exit()
     else:
-        print("opção invalida")
-    print("")
+        print("opção invalida", end="\n\n")
