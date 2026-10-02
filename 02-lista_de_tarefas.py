@@ -55,7 +55,7 @@ def finalizar_tarefa():
         if x["titulo"] == tarefa:
             finalizar = tarefas.index(x)
             tarefas[finalizar]["concluida"]=True
-            return: 0
+            return 0
     print("essa tarefa não está na lista")
 
 def remover_tarefa():
@@ -63,7 +63,7 @@ def remover_tarefa():
     for x in tarefas:
         if x["titulo"] == tarefa:
             tarefas.remove(x)
-            return: 0
+            return 0
     print("essa tarefa não está na lista")
 
 while True:
